@@ -12,7 +12,7 @@ Includes preconfigured authentication, social login (Google & Facebook), and cle
 * ✅ Auto-generated `SECRET_KEY` per project for development
 * ✅ Integrated authentication system
 * ✅ Social login via Google & Facebook
-* ✅ Customs Setting setup by By [Vitor Freitas](https://simpleisbetterthancomplex.com/tips/2017/07/03/django-tip-20-working-with-multiple-settings-modules.html)
+* ✅ Custom Setting setup by By [Vitor Freitas](https://simpleisbetterthancomplex.com/tips/2017/07/03/django-tip-20-working-with-multiple-settings-modules.html)
 * ✅ CLI tool to generate new projects (like `django-admin startproject`)
 ---
 
