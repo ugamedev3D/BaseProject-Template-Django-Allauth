@@ -1,5 +1,5 @@
 from django.urls import path
-from baseproject.template.apps.user.setting.views import *
+from apps.user.setting.views import *
 
 urlpatterns = [
     path('', Setting_View, name='setting'),

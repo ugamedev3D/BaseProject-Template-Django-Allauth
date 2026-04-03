@@ -1,6 +1,10 @@
 [project]
 name = "django-baseproject"
-version = "0.1.0"
+version = "0.1.1"
+summary = "This package is for base project setup with allauth(google, facebook) and custom setting structure"
+author = "Jamal Blaquera"
+author-email = "ugamedev08@gmail.com"
+license = "MIT License"
 dependencies = [
     "django",
     "django-allauth",
@@ -10,6 +14,7 @@ dependencies = [
     "django-compressor",
     "pillow",
     "whitenoise",
+    "requests",
 ]
 
 [build-system]

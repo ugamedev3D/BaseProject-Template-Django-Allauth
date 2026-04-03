@@ -1,22 +1,24 @@
+import os
+
 from .allauth import *
 
-import  os
-from environ import Env
-from django.core.management.utils import get_random_secret_key
+from environ import environ
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
-env = Env(
-    # set casting, default value
+env = environ.Env(
     DEBUG=(bool, False)
 )
-env.read_env()
+
+env.read_env(os.path.join(BASE_DIR, ".env"))
 
 DEBUG = True
+
+ALLOWED_HOSTS = []
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # For development stage use a generate a new random key every server run 
 # for production check production.py 
-SECRET_KEY = get_random_secret_key()
+SECRET_KEY = env("DJANGO_SECRET_KEY")
 
 
 # Use install debugger applications  
@@ -36,7 +38,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -105,3 +107,6 @@ EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+
+COMPRESS_ENABLED = True

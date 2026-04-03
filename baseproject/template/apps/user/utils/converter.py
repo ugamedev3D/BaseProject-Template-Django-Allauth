@@ -4,7 +4,7 @@ from io import BytesIO
 from PIL import Image, ImageOps
 from django.core.files.base import ContentFile
 
-from baseproject.template.core import settings
+from core import settings
 
 def resizeConverter(request, url):
     user = request.user

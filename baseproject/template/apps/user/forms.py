@@ -5,8 +5,8 @@ from django.core.mail import send_mail
 from datetime import timezone
 from django import forms
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
-from baseproject.template.apps.user.auth import flow_fix
-from baseproject.template.core import settings
+from apps.user.auth import flow_fix
+from core import settings
 
 
 User = get_user_model()

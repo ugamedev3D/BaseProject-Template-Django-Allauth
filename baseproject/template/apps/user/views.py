@@ -1,4 +1,4 @@
-from baseproject.template.apps.user.utils.pathresolver import getname_reversepath
+from apps.user.utils.pathresolver import getname_reversepath
 from django.urls import reverse_lazy
 
 from django.shortcuts import redirect, render
@@ -6,7 +6,7 @@ from allauth.account.views import LoginView, PasswordResetFromKeyView, SignupVie
 from django.urls import reverse
 
 from django_htmx.http import retarget
-from baseproject.template.apps.user.forms import MyResetPasswordKeyForm, MyLoginForm, MyResetPasswordForm, MySignupForm
+from apps.user.forms import MyResetPasswordKeyForm, MyLoginForm, MyResetPasswordForm, MySignupForm
 
 from allauth import app_settings as allauth_app_settings
 from allauth.account import app_settings
@@ -26,10 +26,6 @@ def authenticated_login_required(view_func):
                 response = redirect("user:login")
             return retarget(response, "#login")
     return _wrapped_view
-
-@authenticated_login_required
-def baseView(request):
-    return render(request, 'base.html')
 
 class MyLoginView(LoginView):
     template_name = 'account/login.html'

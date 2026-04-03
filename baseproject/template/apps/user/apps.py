@@ -5,6 +5,6 @@ class UserConfig(AppConfig):
     name = 'apps.user'
 
     def ready(self):
-        import baseproject.template.apps.user.allauth_override
-        import baseproject.template.apps.user.auth.flow_fix
-        import baseproject.template.apps.user.signals
+        import apps.user.allauth_override
+        import apps.user.auth.flow_fix
+        import apps.user.signals

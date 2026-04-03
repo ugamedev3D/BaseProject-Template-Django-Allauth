@@ -1,5 +1,5 @@
 from allauth.account.adapter import DefaultAccountAdapter
-from baseproject.template.apps.user.auth import flow_fix
+from apps.user.auth import flow_fix
 from allauth.core import context
 
 class CustomAccountAdapter(DefaultAccountAdapter):

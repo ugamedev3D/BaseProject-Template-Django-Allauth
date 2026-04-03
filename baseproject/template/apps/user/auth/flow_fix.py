@@ -1,4 +1,4 @@
-from baseproject.template.apps.user.utils.pathresolver import getname_reversepath
+from apps.user.utils.pathresolver import getname_reversepath
 
 from django.http import HttpRequest
 from allauth.core.internal.httpkit import get_frontend_url

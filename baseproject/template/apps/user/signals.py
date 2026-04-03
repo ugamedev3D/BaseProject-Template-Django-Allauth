@@ -6,10 +6,10 @@ from django.contrib.auth import get_user_model
 
 from allauth.account.signals import user_logged_in
 
-from baseproject.template.apps.user.utils.converter import resizeConverter
-from baseproject.template.apps.user.utils.providerList import get_provider_url
+from apps.user.utils.converter import resizeConverter
+from apps.user.utils.providerList import get_provider_url
 
-from baseproject.template.core.settings import allauth
+from core.settings import allauth
 
 User = get_user_model()
 
