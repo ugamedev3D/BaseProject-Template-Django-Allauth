@@ -22,6 +22,12 @@ dependencies = [
     "requests"
 ]
 
+[tool.setuptools]
+packages = ["baseproject"]
+
+[tool.setuptools.package-data]
+baseproject = ["templates/**/*", "static/**/*"]
+
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
