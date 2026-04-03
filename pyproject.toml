@@ -1,12 +1,16 @@
 [project]
 name = "django-baseproject"
 version = "0.1.1"
-summary = "This package is for base project setup with allauth(google, facebook) and custom setting structure"
-author = "Jamal Blaquera"
-author-email = "ugamedev08@gmail.com"
-license = "MIT License"
+description = "Base Django project template with allauth (Google, Facebook) and modular settings"
+readme = "README.md"
+license = "MIT"
+
+authors = [
+    { name = "Jamal Blaquera", email = "ugamedev08@gmail.com" }
+]
+
 dependencies = [
-    "django",
+    "django>=4.2",
     "django-allauth",
     "django-environ",
     "django-htmx",
@@ -14,7 +18,7 @@ dependencies = [
     "django-compressor",
     "pillow",
     "whitenoise",
-    "requests",
+    "requests"
 ]
 
 [build-system]
