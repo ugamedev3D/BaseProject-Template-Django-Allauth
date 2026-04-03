@@ -21,7 +21,7 @@ Includes preconfigured authentication, social login (Google & Facebook), and cle
 Install directly from Git:
 
 ```bash
-pip install git+https://github.com/ugamedev3D/Base-Project-Template-Django-Allauth.git
+pip install git+https://github.com/ugamedev3D/BaseProject-Template-Django-Allauth.git
 ```
 
 ---
