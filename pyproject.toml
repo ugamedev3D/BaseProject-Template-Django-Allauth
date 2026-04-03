@@ -12,6 +12,7 @@ authors = [
 dependencies = [
     "django",
     "django-allauth",
+    "django-allauth[socialaccount]",
     "django-environ",
     "django-htmx",
     "django-livereload",
