@@ -5,19 +5,18 @@ Includes preconfigured authentication, social login (Google & Facebook), and cle
 
 ---
 
-## 🚀 Features
+## Features
 
 * ✅ Preconfigured Django project structure
-* ✅ Environment-based settings (`.env`)
-* ✅ Auto-generated `SECRET_KEY` per project
+* ✅ Environment-based settings (`.env`) for development
+* ✅ Auto-generated `SECRET_KEY` per project for development
 * ✅ Integrated authentication system
 * ✅ Social login via Google & Facebook
-* ✅ Ready-to-use with Django REST (optional extension)
+* ✅ Customs Setting setup by By [Vitor Freitas]([https://console.cloud.google.com?utm_source=chatgpt.com](https://simpleisbetterthancomplex.com/tips/2017/07/03/django-tip-20-working-with-multiple-settings-modules.html)
 * ✅ CLI tool to generate new projects (like `django-admin startproject`)
-
 ---
 
-## 📦 Installation
+## Installation
 
 Install directly from Git:
 
@@ -27,7 +26,7 @@ pip install git+https://github.com/ugamedev3D/Base-Project-Template-Django-Allau
 
 ---
 
-## ⚡ Usage
+## Usage
 
 Create a new project:
 
@@ -45,7 +44,7 @@ python manage.py runserver
 
 ---
 
-## 🔐 Environment Configuration
+## Environment Configuration
 
 Each project includes a `.env` file:
 
@@ -63,7 +62,7 @@ ALLOWED_HOSTS=127.0.0.1,localhost
 
 ---
 
-## 🔑 Authentication System
+## Authentication System
 
 This template includes:
 
@@ -75,7 +74,7 @@ Powered by: django-allauth
 
 ---
 
-## 🌐 Social Login Setup
+## Social Login Setup
 
 ### 1. Google OAuth Setup
 
@@ -93,7 +92,7 @@ Go to: [Google Cloud Console](https://console.cloud.google.com?utm_source=chatgp
 5. Add redirect URI:
 
 ```text
-http://127.0.0.1:8000/accounts/google/login/callback/
+http://127.0.0.1:8000/user/account/google/login/callback/
 ```
 
 #### Add to `.env`:
@@ -116,7 +115,7 @@ Go to: [Meta for Developers](https://developers.facebook.com?utm_source=chatgpt.
 3. Configure OAuth redirect URI:
 
 ```text
-http://127.0.0.1:8000/accounts/facebook/login/callback/
+http://127.0.0.1:8000/user/accounts/facebook/login/callback/
 ```
 
 4. Get:
@@ -133,7 +132,7 @@ FACEBOOK_SECRET=your-secret
 
 ---
 
-## ⚙️ Django Settings Highlights
+## Django Settings Highlights
 
 ### Dynamic SECRET_KEY
 
@@ -150,7 +149,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 
 ```python
 INSTALLED_APPS = [
-    "django.contrib.sites",
+    "apps.user",
 
     "allauth",
     "allauth.account",
@@ -174,15 +173,9 @@ AUTHENTICATION_BACKENDS = [
 
 ---
 
-### Site Configuration
-
-```python
-SITE_ID = 1
-```
-
 ---
 
-## 🔄 Migrations
+## Migrations
 
 ```bash
 python manage.py migrate
@@ -190,7 +183,7 @@ python manage.py migrate
 
 ---
 
-## 👤 Create Superuser
+## Create Superuser
 
 ```bash
 python manage.py createsuperuser
@@ -198,16 +191,16 @@ python manage.py createsuperuser
 
 ---
 
-## 🧪 Development Tips
+## Development Tips
 
 * Use `.env` for all secrets
-* Keep settings modular (`base.py`, `dev.py`, `prod.py`)
+* Keep settings modular (`base.py`, `development.py`, `production.py`)
 * Enable logging early
-* Use SQLite for dev, PostgreSQL for production
+* Use SQLite for development, PostgreSQL for production
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 myproject/
@@ -221,18 +214,7 @@ myproject/
 
 ---
 
-## 🚫 .gitignore
-
-```
-.env
-__pycache__/
-*.pyc
-db.sqlite3
-```
-
----
-
-## 🧠 Why This Template?
+## Why This Template?
 
 This base project eliminates repetitive setup and enforces:
 
@@ -242,7 +224,7 @@ This base project eliminates repetitive setup and enforces:
 
 ---
 
-## 📌 Future Improvements
+## Future Improvements
 
 * Docker support
 * CI/CD integration
@@ -251,18 +233,18 @@ This base project eliminates repetitive setup and enforces:
 
 ---
 
-## 📄 License
+## License
 
 MIT License
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Jamal Blaquera
 
 ---
 
-## ⭐ Support
+## Support
 
 If this project helps you, consider giving it a star on GitHub.
