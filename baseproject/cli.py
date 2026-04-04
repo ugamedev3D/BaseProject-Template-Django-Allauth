@@ -28,8 +28,7 @@ def create_project():
         return
 
     # Locate the template folder inside the package
-    package_dir = Path(__file__).parent
-    template_dir = package_dir / "template"
+    template_dir = os.path.join(os.path.dirname(__file__), "template")
 
     if not template_dir.exists():
         print(f"Error: Template folder not found at {template_dir}")
