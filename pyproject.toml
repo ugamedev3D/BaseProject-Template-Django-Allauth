@@ -1,5 +1,5 @@
 [project]
-name = "django-baseproject"
+name = "django-base"
 version = "0.1.1"
 description = "Base Django project template with allauth (Google, Facebook) and modular settings"
 readme = "README.md"
