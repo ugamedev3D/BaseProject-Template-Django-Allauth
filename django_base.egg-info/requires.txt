@@ -1,0 +1,10 @@
+django
+django-allauth
+django-allauth[socialaccount]
+django-environ
+django-htmx
+django-livereload
+django-compressor
+pillow
+whitenoise
+requests

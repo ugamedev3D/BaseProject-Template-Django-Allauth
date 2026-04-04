@@ -1,0 +1,2 @@
+[console_scripts]
+django-base = baseproject.cli:create_project
