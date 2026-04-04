@@ -19,9 +19,6 @@ def create_project(name):
         f.write(f"EMAIL_HOST_USER=example@gmail.com\n")
         f.write(f"EMAIL_HOST_PASSWORD=**** **** **** ***\n")
 
-    if not Path(template_dir).exists():
-        raise FileNotFoundError(f"Template folder not found at {template_dir}")
-
     shutil.copytree(str(template_dir), name)
 
     print(f"Project '{name}' created successfully.")
