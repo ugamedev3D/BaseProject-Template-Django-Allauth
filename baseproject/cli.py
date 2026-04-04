@@ -5,20 +5,19 @@ from django.core.management.utils import get_random_secret_key
 import argparse
 import sys
 
-def create_project(name):
+def create_project():  # Remove 'name' parameter
     parser = argparse.ArgumentParser(description="Create Django base project")
     parser.add_argument("name", help="Project name")
 
     args = parser.parse_args()
-    name = args.name
+    name = args.name  # Get name from parsed args
 
     template_dir = files("baseproject").joinpath("template")
-
 
     if not Path(template_dir).exists():
         raise FileNotFoundError(f"Template folder not found at {template_dir}")
 
-     # Create .env
+    # Create .env
     env_path = files(name, ".env")
     with open(env_path, "w") as f:
         f.write(f"DJANGO_SECRET_KEY={get_random_secret_key()}\n")
