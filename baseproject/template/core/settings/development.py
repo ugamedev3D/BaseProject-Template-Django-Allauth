@@ -3,13 +3,12 @@ import os
 from .allauth import *
 
 from environ import environ
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 env = environ.Env(
     DEBUG=(bool, False)
 )
 
-env.read_env(os.path.join(BASE_DIR, ".env"))
+env.read_env(BASE_DIR / ".env")
 
 DEBUG = True
 
@@ -38,7 +37,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': BASE_DIR / 'db.sqlite3'
     }
 }
 

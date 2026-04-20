@@ -3,7 +3,7 @@ django-allauth
 django-allauth[socialaccount]
 django-environ
 django-htmx
-django-livereload
+django-livereload-server
 django-compressor
 pillow
 whitenoise

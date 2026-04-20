@@ -11,7 +11,7 @@ Requires-Dist: django-allauth
 Requires-Dist: django-allauth[socialaccount]
 Requires-Dist: django-environ
 Requires-Dist: django-htmx
-Requires-Dist: django-livereload
+Requires-Dist: django-livereload-server
 Requires-Dist: django-compressor
 Requires-Dist: pillow
 Requires-Dist: whitenoise
