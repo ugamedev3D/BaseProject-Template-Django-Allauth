@@ -191,4 +191,4 @@ The base settings (`core/settings/base.py`) include:
 
 ## 👤 Author
 
-**Jamal Blaquera** — [ugamedev88@gmail.com](mailto:ugamedev88@gmail.com)
+**Jamal Blaquera** — [ugamedev08@gmail.com](mailto:ugamedev08@gmail.com)
